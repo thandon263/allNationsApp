@@ -53,13 +53,17 @@ class HandleViewController: UIViewController, UITextFieldDelegate {
                     // Update the handle in the handle node
                     handles.child(self.handle.text!).setValue(userId as! String)
                 
+                    // Clear screen
+                    self.fullName.text = ""
+                    self.handle.text = ""
+                
                     // Send User to the home screen
                     self.performSegue(withIdentifier: "HomeViewSegue", sender: nil)
                 
             } else {
                 self.errorMessage.text = "Handle already in use!"
             }
-            })
+        })
     }
     
     @IBAction func onPressBack(_ sender: Any) {
