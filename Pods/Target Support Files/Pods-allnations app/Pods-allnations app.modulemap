@@ -1,0 +1,6 @@
+framework module Pods_allnations_app {
+  umbrella header "Pods-allnations app-umbrella.h"
+
+  export *
+  module * { export * }
+}
